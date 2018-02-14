@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -55,17 +56,36 @@ module.exports = {
           ]
       },
       {
-          test: /\.css$/,
-          loader: 'style-loader!css-loader'
+        test: /\.(css|scss)$/,
+        loader:  ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+           'style-loader', // creates style nodes from JS strings
+           'css-loader', // translates CSS into CommonJS
+           'sass-loader' // compiles Sass to CSS
+          ]
+         })
       },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader' // compiles Sass to CSS
-        ]
-      },
+
+      // {
+      //     test: /\.css$/,
+      //     loader: 'style-loader!css-loader'
+      // },
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     fallback: "style-loader",
+      //     use: "css-loader"
+      //   })
+      // }
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader', // creates style nodes from JS strings
+      //     'css-loader', // translates CSS into CommonJS
+      //     'sass-loader' // compiles Sass to CSS
+      //   ]
+      // },
       {
          test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
          use: [{
@@ -80,6 +100,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin("styles.css"),
     new HtmlWebpackPlugin ({
       inject: true,
       template: 'src/index.html.tmpl'
