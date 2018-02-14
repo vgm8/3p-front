@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: '/',
     filename: 'bundle.js',
     publicPath: '/',
   },
@@ -27,20 +27,29 @@ module.exports = {
         test: /\.(gif|jpg|jpeg|png)$/,
         use: 'url-loader?limit=2000'
       },
+
+      // {
+      //   test: /\.styl$/,
+      //   use: [
+      //     'style-loader',
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         modules: true,
+      //         // localIdentName: '[local]'
+      //         localIdentName: '[name]__[local]___[hash:base64:5]'
+      //       }
+      //     },
+      //     'stylus-loader'
+      //   ]
+      // },
       {
-        test: /\.styl$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[local]'
-              // localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          },
-          'stylus-loader'
-        ]
+          test: /\.styl$/,
+          loader: 'style-loader!css-loader!stylus-loader'
+      },
+      {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader'
       },
       {
           test: /\.scss$/,
@@ -68,7 +77,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin ({
       inject: true,
-      template: 'src/index.html'
+      template: 'src/index.html.tmpl'
     })
   ],
   devServer: {

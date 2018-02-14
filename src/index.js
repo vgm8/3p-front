@@ -7,4 +7,4 @@ import './scss/main.scss';
 import App from './App';
 
 // ReactDOM.render(<Navbar />, document.getElementById('react-nav'));
-ReactDOM.render(<App />, document.getElementById('react-container'));
+ReactDOM.render(<App />, document.getElementById('root'));
