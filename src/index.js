@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-require('../dist/index.html');
+// require('../dist/index.html');
 import './index.styl';
 import './scss/main.scss';
 // import { Navbar } from './components/Navbar.js';

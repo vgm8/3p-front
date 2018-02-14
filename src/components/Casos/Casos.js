@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink, Redirect } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import './Casos.styl';
 import image from './assignment-turned-in.png';
 
@@ -47,8 +47,9 @@ const casos = [
 const CasesList = ({ match, status }) => {
   console.log(match);
   const casosList = casos.map((caso) => {
+    let item = '';
     if (match.params.status === 'todos' || caso.status === match.params.status) {
-      return (
+      item = (
         <div key={caso.title} className={`${caso.status} tresp-caso`}>
           <div className={`tresp-caso`}  style={{flex: 1}}>
             <div className="status enviado"></div>
@@ -87,7 +88,7 @@ const CasesList = ({ match, status }) => {
         <div style={{width: '170px'}} className="display-flex end-x">
           { caso.auditoria
             ? (<div className="display-flex column center-y">
-                <img style={{maxWidth: '30px', maxHeight: '30px'}} src={image}></img>
+                <img style={{maxWidth: '30px', maxHeight: '30px'}} src={image} alt="auditoria"></img>
                 <span style={{fontSize: '11px'}} >Auditoría</span>
               </div>)
             : ''
@@ -103,6 +104,7 @@ const CasesList = ({ match, status }) => {
     </div>
   )
     }
+    return item;
   });
 
   return(

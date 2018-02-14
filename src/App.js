@@ -3,7 +3,7 @@ import { Home } from './components/Home.js';
 import { About } from './components/About.js';
 import { Contact } from './components/Contact.js';
 import { Navbar } from './components/Navbar/Navbar.js';
-import { HashRouter as Router, Redirect, Switch, Route, NavLink, Link } from 'react-router-dom';
+import { HashRouter as Router, Redirect, Switch, Route } from 'react-router-dom';
 import { Casos } from './components/Casos/Casos.js';
 import { CreateCases } from './components/Casos/CreateCases.js';
 // import './App.css';

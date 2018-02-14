@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.styl';
 
 export class Navbar extends React.Component {
@@ -7,7 +7,7 @@ export class Navbar extends React.Component {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-white tesp-header">
           <a className="navbar-brand" href="#">
-            <img style={{height: '50px', marginRight: '20px'}} src="http://scaffold.eu-vri.eu/images/13/SCAFFOLD/acciona_logo.png"></img>
+            <img alt="user" style={{height: '50px', marginRight: '20px'}} src="http://scaffold.eu-vri.eu/images/13/SCAFFOLD/acciona_logo.png"></img>
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
