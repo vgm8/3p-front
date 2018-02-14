@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .DS_Store
 .idea
 .tmp
@@ -10,8 +9,6 @@ node_modules
 dist
 bundle
 coverage
-=======
-# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -32,4 +29,3 @@ coverage
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
->>>>>>> e1a0194... :tada: Casos versión 1
