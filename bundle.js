@@ -24619,7 +24619,7 @@ var Casos = function Casos(_ref2) {
             'div',
             { className: 'display-flex column center-x center-y' },
             _react2.default.createElement('i', { className: 'fa fa-paper-plane', 'aria-hidden': 'true' }),
-            'ENVIADOS'
+            'ENVIADOSSS'
           )
         )
       ),
