@@ -45,21 +45,23 @@ module.exports = {
       // },
       {
           test: /\.styl$/,
-          loader: 'style-loader!css-loader!stylus-loader'
+          use: [
+            'style-loader',
+            'css-loader',
+            'stylus-loader'
+          ]
       },
       {
           test: /\.css$/,
           loader: 'style-loader!css-loader'
       },
       {
-          test: /\.scss$/,
-          use: [{
-              loader: "style-loader" // creates style nodes from JS strings
-          }, {
-              loader: "css-loader" // translates CSS into CommonJS
-          }, {
-              loader: "sass-loader" // compiles Sass to CSS
-          }]
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader' // compiles Sass to CSS
+        ]
       },
       {
          test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
