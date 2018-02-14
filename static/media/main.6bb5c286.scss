@@ -1,0 +1,10 @@
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+.navbar.tesp-header .nav-item {
+  min-width: 80px;
+}
+.navbar.tesp-header .nav-item .nav-link.active {
+  color: #f00;
+  font-weight: 500;
+}
