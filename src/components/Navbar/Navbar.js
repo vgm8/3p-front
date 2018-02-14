@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import './Navbar.styl';
+import './Navbar.styl';
 
 export class Navbar extends React.Component {
   render() {
@@ -14,18 +14,9 @@ export class Navbar extends React.Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
-              {/*<li className="nav-item">
-                <NavLink className="nav-link" exact to="/" activeClassName="active">Home</NavLink>
-              </li>
+
               <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/address">About</NavLink>
-              </li>
-              <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/contact">Contact</NavLink>
-              </li>
-              */}
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/casos" replace activeClassName="active">Casos5</NavLink>
+                <NavLink className="nav-link" to="/casos" replace activeClassName="active">Casos6</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/create-case" replace activeClassName="active">Crear caso</NavLink>
