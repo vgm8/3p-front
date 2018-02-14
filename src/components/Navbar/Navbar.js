@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.styl';
+// import './Navbar.styl';
 
 export class Navbar extends React.Component {
   render() {
@@ -25,7 +25,7 @@ export class Navbar extends React.Component {
               </li>
               */}
               <li className="nav-item">
-                <NavLink className="nav-link" to="/casos" replace activeClassName="active">Casos3</NavLink>
+                <NavLink className="nav-link" to="/casos" replace activeClassName="active">Casos5</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/create-case" replace activeClassName="active">Crear caso</NavLink>

@@ -55,37 +55,39 @@ module.exports = {
             'stylus-loader'
           ]
       },
-      {
-        test: /\.(css|scss)$/,
-        loader:  ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-           'style-loader', // creates style nodes from JS strings
-           'css-loader', // translates CSS into CommonJS
-           'sass-loader' // compiles Sass to CSS
-          ]
-         })
-      },
-
       // {
-      //     test: /\.css$/,
-      //     loader: 'style-loader!css-loader'
+      //   test: /\.(css|scss)$/,
+      //   loader:  ExtractTextPlugin.extract({
+      //     fallback: 'style-loader',
+      //     use: [
+      //      'style-loader', // creates style nodes from JS strings
+      //      'css-loader', // translates CSS into CommonJS
+      //      'sass-loader' // compiles Sass to CSS
+      //     ]
+      //    })
       // },
+
+      {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader'
+      },
       // {
       //   test: /\.css$/,
       //   use: ExtractTextPlugin.extract({
       //     fallback: "style-loader",
-      //     use: "css-loader"
+      //     use: "css-loader!sass-loader",
       //   })
-      // }
-      // {
-      //   test: /\.scss$/,
-      //   use: [
-      //     'style-loader', // creates style nodes from JS strings
-      //     'css-loader', // translates CSS into CommonJS
-      //     'sass-loader' // compiles Sass to CSS
-      //   ]
       // },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+            use: [
+             'css-loader', // translates CSS into CommonJS
+             'sass-loader' // compiles Sass to CSS
+          ]
+        })
+      },
       {
          test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
          use: [{
