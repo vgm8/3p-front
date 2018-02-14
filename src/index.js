@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 // require('../dist/index.html');
 import './index.styl';
 import './scss/main.scss';
+// import './scss/main.css';
 // import { Navbar } from './components/Navbar.js';
 import App from './App';
 
