@@ -1,0 +1,109 @@
+.nav-tabs
+  background #e8e7e7
+  .nav-item
+    &.show .nav-link
+    .nav-link
+      border-radius: 0;
+      border-top: 0;
+      height: 50px;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 8px;
+      padding-top: 11px
+      min-width 120px
+      color #999
+      &.active
+        color #ff0000
+        background white
+        box-shadow: inset 0px 10px 0px -5px #ff0000;
+      .fa
+        margin-bottom 2px
+        font-size 15px
+
+.tresp-casos
+  margin-top 15px
+  .buscar
+    border-radius 20px
+    border: 1px solid #ddd;
+    padding: 2px 2px 2px 5px;
+  .casos-containers
+    background white
+    border-color #dee2e6
+    border-style solid
+    border-width 0 1px 1px 1px
+    .tesp-casos-list
+      .tresp-caso
+        height 75px
+        border 1px solid alpha(#ddd, 0.5)
+        border-width 1px 0 0 0
+        padding 15px
+        display flex
+        justify-content start
+        align-items center
+        background white
+        &.enviado
+          padding-left 0
+          padding-right 0
+          border-left 7px solid #2ECC71
+          border-width 0px 0px 0px 7px
+        &.cerrado
+          padding-left 0
+          padding-right 0
+          border-left 7px solid #C0392B
+          border-width 0px 0px 0px 7px
+        &.borrador
+          padding-left 0
+          padding-right 0
+          border-left 7px solid #F39C12
+          border-width 0px 0px 0px 7px
+        .fa-check-square-o
+          color green
+          margin-right 5px
+        .fa-square-o
+          margin-right 5px
+        .title
+          min-width 300px
+          line-height 1
+          margin-left 10px
+          font-size 20px
+          margin-top 7px
+        .statusTitle
+          margin-top 5px
+          line-height 1
+          font-size 11px
+          margin-left 10px
+        .legal
+          min-width 200px
+        .negocio
+          min-width 200px
+        .edit
+          margin-right 20px
+          font-size 20px
+          color #999
+    .tesp-casos-list2
+      .tresp-caso
+        height 75px
+        border 1px solid #dddd
+        border-radius 6px
+        margin-bottom 5px
+        padding 15px
+        display flex
+        justify-content start
+        align-items center
+        background white
+        .status
+          width 13px
+          height 13px
+          border-radius 50%
+          &.enviado
+            background green
+        .title
+          line-height 1
+          margin-left 10px
+          font-size 24px
+          font-weight 300
+          margin-top 7px
+        .statusTitle
+          line-height 1
+          font-size 11px
+          margin-left 10px
