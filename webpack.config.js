@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -71,23 +71,24 @@ module.exports = {
           test: /\.css$/,
           loader: 'style-loader!css-loader'
       },
-      // {
-      //   test: /\.css$/,
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: "style-loader",
-      //     use: "css-loader!sass-loader",
-      //   })
-      // },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-            use: [
-             'css-loader', // translates CSS into CommonJS
-             'sass-loader' // compiles Sass to CSS
-          ]
-        })
+        use:  [
+          'style-loader', // translates CSS into CommonJS
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader'
+        ]
       },
+      // {
+      //   test: /\.scss$/,
+      //   loader: ExtractTextPlugin.extract({
+      //     fallback: 'style-loader',
+      //       use: [
+      //        'css-loader', // translates CSS into CommonJS
+      //        'sass-loader' // compiles Sass to CSS
+      //     ]
+      //   })
+      // },
       {
          test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
          use: [{

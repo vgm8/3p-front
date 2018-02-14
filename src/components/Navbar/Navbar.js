@@ -16,7 +16,7 @@ export class Navbar extends React.Component {
             <ul className="navbar-nav">
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/casos" replace activeClassName="active">Casos</NavLink>
+                <NavLink className="nav-link" to="/casos" replace activeClassName="active">Casos1</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/create-case" replace activeClassName="active">Crear caso</NavLink>
