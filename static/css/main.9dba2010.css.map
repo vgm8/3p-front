@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss/main.css"],"names":[],"mappings":"AAAA,8BACE,cAAgB,CAElB,+CACE,UACA,eAAiB","file":"static/css/main.9dba2010.css","sourcesContent":[".navbar.tesp-header .nav-item {\n  min-width: 80px;\n}\n.navbar.tesp-header .nav-item .nav-link.active {\n  color: #f00;\n  font-weight: 500;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/scss/main.css"],"sourceRoot":""}
